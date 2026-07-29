@@ -96,44 +96,4 @@ http://localhost:5000
 }
 ```
 
-## Data Flow
 
-1. **User** enters Employee ID and message in frontend
-2. **Frontend** sends POST request to `http://localhost:5000/api/chat`
-3. **C# Backend** routes request based on intent:
-   - Employee queries → MCP Server via McpClientService
-   - Other queries → Python AI Service
-4. **Python AI Service** (if used):
-   - Detects intent using GitHub Models LLM
-   - Sends request to MCP Server for data
-   - Formats response with LLM
-5. **Response** flows back through all layers to frontend
-6. **Frontend** displays response in chat interface
-
-## Fixes Applied
-
-✅ HTML/CSS/JavaScript linking fixed
-✅ API response format synchronized across services
-✅ C# backend JSON response parsing corrected
-✅ Static file serving enabled in C# backend
-✅ CORS configured for service-to-service communication
-✅ Database initialization script provided
-✅ F-string formatting issues in Python agents fixed
-✅ Port configuration corrected
-
-## Common Issues
-
-### "Unable to reach Employee Support Service"
-- Check if C# backend is running on port 5000
-- Check browser console for actual error message
-- Verify network connectivity
-
-### "MCP Error" in responses
-- Ensure MCP server is running on port 8001
-- Verify database file exists and has correct schema
-- Check employee ID is valid (EMP001-EMP005)
-
-### API calls failing
-- Ensure all three services are running
-- Check port configurations match
-- Verify GitHub API key is valid
