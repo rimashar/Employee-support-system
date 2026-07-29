@@ -1,0 +1,21 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# .NET
+bin/
+obj/
+
+# IDE
+.vscode/
+
+# Environment files
+.env
+
+# Logs
+*.log

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Support System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <h2>Employee Support</h2>
+        </div>
+
+        <div class="quick-actions">
+
+            <h3>Quick Actions</h3>
+
+            <button onclick="sendQuickAction('Show my profile')">
+                👤 My Profile
+            </button>
+
+            <button onclick="sendQuickAction('Who is my manager?')">
+                👨‍💼 My Manager
+            </button>
+
+            <button onclick="sendQuickAction('Who is my skip manager?')">
+                📈 Skip Manager
+            </button>
+
+            <button onclick="sendQuickAction('Which department am I in?')">
+                🏢 My Department
+            </button>
+
+            <button onclick="sendQuickAction('What is my leave balance?')">
+                🌴 Leave Balance
+            </button>
+
+        </div>
+
+    </aside>
+
+    <aside class="tickets-panel">
+            <h3>My Tickets</h3>
+
+            <div id = "ticketsContainer">
+            </div>
+    </aside>
+
+    <div class="chat-header">
+
+        <div class="employee-section">
+
+            <label>Employee ID</label>
+
+            <input
+                id="employeeId"
+                type="text"
+                placeholder="Enter Employee ID (e.g. EMP005)" />
+
+        </div>
+
+    </div>
+
+    <main class="chat-panel">
+
+        <div class="chat-header">
+            Employee Assistant
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="assistant-message">
+                Hello! I can help with:
+                <ul>
+                    <li>Profile Information</li>
+                    <li>Manager Information</li>
+                    <li>Department Information</li>
+                    <li>Leave Balances</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                id="messageInput"
+                type="text"
+                placeholder="Ask a question..."
+            >
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
